@@ -1,5 +1,5 @@
 import express from 'express';
-import {parseFrameRequest, errorFrame, createSuccessFrame, createAlreadyFrame} from '../lib/farcaster';
+import {parseFrameRequest, errorFrame, createSuccessFrame} from '../lib/farcaster';
 import {airdropTo, getOwnerNFTFromFid} from '../lib/nft';
 
 const router = express.Router();
@@ -19,7 +19,7 @@ router.post('/mint/:address', async (req, res) => {
     const address = req.params.address;
     if (typeof address !== 'string') return res.status(400).send(errorFrame);
     const isAllowed = await getOwnerNFTFromFid(address as `0x${string}`);
-    if(!isAllowed) return res.status(400).send(createAlreadyFrame(address));
+    if(!isAllowed) return res.status(400).send(createSuccessFrame(address));
     // Airdrop NFT to the user's wallet
     const tx = await airdropTo(address, fid);
     if (!tx) return res.status(400).send(errorFrame);
