@@ -18,7 +18,6 @@ const createSmartWalletForFid = async (fid: string, ownerAddress: string) => {
     try {
         const player = await openfort.players.create({"name":fid, description: "Smart Wallet"})
         const account  = await openfort.accounts.create({player:player.id, chainId: 84532, externalOwnerAddress:ownerAddress})
-        await openfort.accounts.deploy({id:player.id, policy:process.env.POLICY_ID!})
 
         smartWalletAddress = account ? account.address : undefined;
     } catch (e) {

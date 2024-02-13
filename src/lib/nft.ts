@@ -8,7 +8,7 @@ const DEVELOPER_ACCOUNT_ID = process.env.DEVELOPER_ACCOUNT_ID!;
 const OPENFORT_API_KEY = process.env.OPENFORT_API_KEY!;
 const openfort = new Openfort(OPENFORT_API_KEY)
 
-const NFT_CONTRACT_ADDRESS: `0x${string}` = '0xc6c8fd9ab014b7f8d799a15f7efc5d348b8dfaf8'; // Sepolia Base
+const NFT_CONTRACT_ADDRESS: `0x${string}` = '0xb437445356D95F4d7D460597d0ecC9fa3028Cfce'; // Sepolia Base
 
 
 export const airdropTo = async (recipient: string, fid: number) => {
