@@ -11,7 +11,7 @@ dotenv.config();
 export const FRAME_BASE_URL = process.env.BASE_URL || 'https://openfort-frames-demo.onrender.com';
 
 const ID_REGISTRY_CONTRACT_ADDRESS: `0x${string}` = '0x00000000fc6c5f01fc30151999387bb99a9f489b'; // Optimism Mainnet
-const ZERO_ADDRESS: `0x${string}` = '0x0000000000000000000000000000000000000000';
+export const ZERO_ADDRESS: `0x${string}` = '0x0000000000000000000000000000000000000000';
 const HUB_URL = 'nemes.farcaster.xyz:2283';
 
 export const FrameImageUrls = {
