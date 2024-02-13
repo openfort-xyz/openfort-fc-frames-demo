@@ -28,15 +28,15 @@ npm i
 
 4. Initialize your environment variables by copying the contents of `.env.example` to a new `.env` file, and fill in the required values. You'll need to set a base URL, your contract ID, policy ID, developer account ID, and your Openfort API key. 
 
-5. Create a Policy
+5. Import the contract:  Checkout the [guide](https://www.openfort.xyz/docs/guides/transaction-cloud/policies/strategies).
 
-You can create Policies in the [Dashboard](https://dashboard.openfort.xyz) or with the API. This sample requires a Policy to run. Once you've created them, and add its ID tor .env.
+6. Create a Policy to sponsor the transactions:  Checkout the [guide](https://www.openfort.xyz/docs/guides/transaction-cloud/policies/strategies). For this demo, you must include two policy rules. One of type 'account_functions' to allow for smart contract deployment, and another rule of type 'contract_functions' to allow sponsoring the mint gaslessly.
 
-policy is the ID of a Policy for your account creation. A policy has a chainId. For this demo to work, the policy must have the account as rule.
+7. Creating a Developer Account to mint the assets: Checkout the [guide](https://www.openfort.xyz/docs/guides/accounts/dev/minting-account).
 
 ```sh
 NEXT_PUBLIC_BASE_URL=<insert-the-url-for-your-frame>
-CONTRACT_ID=<insert-your-contractid>
+CONTRACT_ID=<insert-your-contract-id>
 POLICY_ID=<insert-your-policy-id>
 DEVELOPER_ACCOUNT_ID=<insert-your-developer-account-id>
 OPENFORT_API_KEY=<insert-your-openfort-api-secret>
