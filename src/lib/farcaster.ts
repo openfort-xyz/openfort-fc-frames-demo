@@ -18,7 +18,8 @@ export const FrameImageUrls = {
     START : `${FRAME_BASE_URL}/landing.png`,
     WALLET : `${FRAME_BASE_URL}/wallet.png`,
     SUCCESS : `${FRAME_BASE_URL}/success.png`,
-    ERROR : `${FRAME_BASE_URL}/error.png`
+    ERROR : `${FRAME_BASE_URL}/error.png`,
+    ALREADY : `${FRAME_BASE_URL}/already.png`
 }
 
 export const createFrame = (imageUrl: string, buttonText: string, apiPath: string, isRedirect = false) => {
@@ -41,6 +42,10 @@ export const createWalletFrame = (address: string) => {
 
 export const createSuccessFrame = (address: string) => {
     return createFrame(FrameImageUrls.SUCCESS, 'Done', `api/done?address=${address}`, true);
+}
+
+export const createAlreadyFrame = (address: string) => {
+    return createFrame(FrameImageUrls.ALREADY, 'Done', `api/done?address=${address}`, true);
 }
 
 export const errorFrame = createFrame(FrameImageUrls.ERROR, 'Try again?', 'api/wallet');
