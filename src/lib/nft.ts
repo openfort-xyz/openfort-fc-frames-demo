@@ -71,5 +71,5 @@ export const getOwnerNFTFromFid = async (address: `0x${string}`) => {
     } catch (error) {
         console.error(error);
     }
-    return ownerAddress === BigInt(0) ? ownerAddress : undefined;
+    return ownerAddress === BigInt(0) ? true : false;
 }

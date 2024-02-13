@@ -14,7 +14,6 @@ export const createOrFindSmartWalletForFid = async (fid: number, ownerAddress: s
 
 const createSmartWalletForFid = async (fid: string, ownerAddress: string) => {
     let smartWalletAddress: string | undefined;
-    let conflictingDid: string | undefined;
 
     try {
         const player = await openfort.players.create({"name":fid, description: "Smart Wallet"})
@@ -23,10 +22,10 @@ const createSmartWalletForFid = async (fid: string, ownerAddress: string) => {
 
         smartWalletAddress = account ? account.address : undefined;
     } catch (e) {
-        conflictingDid = (e as any).response.data.cause;
+        console.error(e);
     }
 
-    return {address: smartWalletAddress, conflictingDid: conflictingDid};
+    return {address: smartWalletAddress};
 }
 
 export const findExistingSmartWalletForFid = async (fid: string) => {
