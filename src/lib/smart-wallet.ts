@@ -32,7 +32,8 @@ const createSmartWalletForFid = async (fid: string, ownerAddress: string) => {
 export const findExistingSmartWalletForFid = async (fid: string) => {
     try {
         const response = await openfort.players.list({name:fid, expand: ['accounts']})
-        const accounts = response.data[0]?.accounts
+        if(!response || response.data.length === 0) return undefined;
+        const accounts = response.data[0].accounts
         const smartWallet = accounts?.find((account:any) => account.chainId === 84532);
         return smartWallet ? smartWallet.address : undefined;
     } catch (error) {
