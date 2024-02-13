@@ -50,7 +50,7 @@ function frameGenerator(frameProps: IFrameProps): string {
                 <meta charset="utf-8">
                 <title>Openfort Frames</title>
                 <meta property="og:title" content="Openfort frames quickstart" />
-                <meta property="og:image" content="https://example.com/img.png" />
+                <meta property="og:image" content=${FrameImageUrls.START} />
                 ${metaTag}
             </head>
         </html>
