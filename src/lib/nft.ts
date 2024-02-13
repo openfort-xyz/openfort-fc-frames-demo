@@ -1,7 +1,6 @@
 import Openfort from "@openfort/openfort-node"
 import { createPublicClient, getContract, http } from "viem";
-import { baseSepolia, sepolia } from "viem/chains";
-import { ZERO_ADDRESS } from "./farcaster";
+import { baseSepolia } from "viem/chains";
 
 const CONTRACT_ID = process.env.CONTRACT_ID!;
 const POLICY_ID = process.env.POLICY_ID!;

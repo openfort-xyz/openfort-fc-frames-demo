@@ -15,7 +15,7 @@ app.use(cors({
 
 const port = 8080;
 
-app.use('/frame', frame);
+app.use('/', frame);
 
 app.use('/api', wallet); 
 app.use('/api', mint); 
