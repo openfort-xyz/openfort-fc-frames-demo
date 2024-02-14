@@ -54,4 +54,4 @@ You can test this Frame using [Warpcast Embed Tools](https://warpcast.com/~/deve
 - `src/lib/nft.ts` to see how to airdrop the ERC-721 you deployed to a user's wallet address
 - `src/services/wallet.ts` to see how the first Frame interaction generates an embedded wallet for the user
 - `src/services/mint.ts` to see how the second Frame interaction airdrops an NFT to the user
-- `contracts/FrameDrop.sol` for the sample contract used, from OpenZeppelin
+- `contracts/src/OpenfortFrameNFT.sol` for the sample contract used.
